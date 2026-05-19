@@ -1,0 +1,392 @@
+/* 全局样式 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft YaHei", "PingFang SC", sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+}
+
+/* 顶部搜索栏 */
+.header {
+    background: #fff;
+    padding: 20px 0;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.search-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.search-box input {
+    flex: 1;
+    padding: 10px 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+.filter-tags {
+    display: flex;
+    gap: 8px;
+}
+
+.tag {
+    padding: 6px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tag:hover,
+.tag.active {
+    background: #1890ff;
+    color: #fff;
+    border-color: #1890ff;
+}
+
+.search-btn {
+    padding: 10px 25px;
+    background: #1890ff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background 0.3s;
+}
+
+.search-btn:hover {
+    background: #40a9ff;
+}
+
+/* 通用标题样式 */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.section-title h2 {
+    font-size: 20px;
+    color: #333;
+    font-weight: 600;
+}
+
+.dot {
+    width: 6px;
+    height: 6px;
+    background: #1890ff;
+    border-radius: 50%;
+}
+
+/* 资源中心 - 地图 */
+.resource-center {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.map-container {
+    width: 100%;
+    border: 1px solid #e0e0e0;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+/* 应用中心 */
+.app-center {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.app-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.tab-btn {
+    padding: 8px 20px;
+    border: 1px solid #ddd;
+    background: #fff;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s;
+}
+
+.tab-btn.active,
+.tab-btn:hover {
+    background: #1890ff;
+    color: #fff;
+    border-color: #1890ff;
+}
+
+.app-cards {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 15px;
+}
+
+.app-card {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.3s;
+}
+
+.app-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+}
+
+.app-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.card-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 12px;
+}
+
+/* 开发中心 */
+.dev-center {
+    background: #fff;
+    padding: 40px 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.stats-bar {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-bottom: 50px;
+    padding: 20px;
+    background: #f0f7ff;
+    border-radius: 8px;
+}
+
+.stat-item {
+    text-align: center;
+}
+
+.stat-num {
+    font-size: 36px;
+    font-weight: bold;
+    color: #1890ff;
+}
+
+.stat-unit {
+    font-size: 14px;
+    color: #666;
+}
+
+.stat-label {
+    display: block;
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+}
+
+/* 时间线 */
+.timeline {
+    position: relative;
+    padding: 40px 0;
+}
+
+.timeline-line {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: #1890ff;
+    transform: translateY(-50%);
+}
+
+.timeline-items {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 0 10%;
+}
+
+.timeline-item {
+    position: relative;
+    width: 18%;
+}
+
+.timeline-item.top {
+    padding-bottom: 30px;
+}
+
+.timeline-item.bottom {
+    padding-top: 30px;
+    margin-top: 60px;
+}
+
+.item-dot {
+    width: 12px;
+    height: 12px;
+    background: #1890ff;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.timeline-item.top .item-dot {
+    bottom: -6px;
+}
+
+.timeline-item.bottom .item-dot {
+    top: -6px;
+}
+
+.item-content {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+}
+
+.item-content h3 {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+.item-content p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* 底部 */
+.footer {
+    background: #1a1a2e;
+    color: #fff;
+    padding: 40px 20px 20px;
+    margin-top: 40px;
+}
+
+.footer-links {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+.link-group h4 {
+    font-size: 14px;
+    margin-bottom: 10px;
+    color: #fff;
+}
+
+.link-group a {
+    color: #aaa;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.link-group a:hover {
+    color: #fff;
+}
+
+.footer-selects {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.footer-selects select {
+    flex: 1;
+    padding: 8px;
+    background: #2a2a4a;
+    color: #fff;
+    border: 1px solid #444;
+    border-radius: 4px;
+    font-size: 12px;
+}
+
+.footer-info {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    border-top: 1px solid #333;
+    padding-top: 20px;
+}
+
+.footer-info p {
+    font-size: 12px;
+    color: #888;
+    margin: 5px 0;
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+    .app-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .stats-bar {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .timeline-items {
+        flex-direction: column;
+        padding: 0;
+    }
+    
+    .timeline-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+    
+    .timeline-line {
+        display: none;
+    }
+}

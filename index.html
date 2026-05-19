@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>资源中心</title>
+    <link rel="stylesheet" href="css/style.css">
+    <!-- 引入 ECharts 用于地图 -->
+    <script src="https://cdn.jsdelivr.net/npm/echarts@5.4.3/dist/echarts.min.js"></script>
+</head>
+<body>
+    <!-- 顶部搜索栏 -->
+    <header class="header">
+        <div class="search-container">
+            <div class="search-box">
+                <input type="text" placeholder="请输入关键词查询......">
+                <div class="filter-tags">
+                    <span class="tag active">影像</span>
+                    <span class="tag">审批</span>
+                    <span class="tag">国土调查</span>
+                    <span class="tag">城镇开发</span>
+                    <span class="tag">耕地保护</span>
+                </div>
+                <button class="search-btn">综合查询</button>
+            </div>
+        </div>
+    </header>
+
+    <!-- 资源中心 - 地图区域 -->
+    <section class="resource-center">
+        <div class="section-title">
+            <span class="dot"></span>
+            <h2>资源中心</h2>
+            <span class="dot"></span>
+        </div>
+        <div class="map-container">
+            <div id="china-map" style="width: 100%; height: 500px;"></div>
+        </div>
+    </section>
+
+    <!-- 应用中心 -->
+    <section class="app-center">
+        <div class="section-title">
+            <span class="dot"></span>
+            <h2>应用中心</h2>
+            <span class="dot"></span>
+        </div>
+        <div class="app-tabs">
+            <button class="tab-btn active">应用场景</button>
+            <button class="tab-btn">地方应用</button>
+            <button class="tab-btn">应用链接</button>
+        </div>
+        <div class="app-cards">
+            <div class="app-card">
+                <img src="images/app1.jpg" alt="自然资源大管家">
+                <div class="card-title">■ 自然资源"大管家"</div>
+            </div>
+            <div class="app-card">
+                <img src="images/app2.jpg" alt="三区三线管控">
+                <div class="card-title">■ 三区三线管控</div>
+            </div>
+            <div class="app-card">
+                <img src="images/app3.jpg" alt="审批服务">
+                <div class="card-title">■ 审批服务</div>
+            </div>
+            <div class="app-card">
+                <img src="images/app4.jpg" alt="确权登记">
+                <div class="card-title">■ 确权登记</div>
+            </div>
+            <div class="app-card">
+                <img src="images/app5.jpg" alt="重点监管">
+                <div class="card-title">■ 重点监管</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 开发中心 -->
+    <section class="dev-center">
+        <div class="section-title">
+            <span class="dot"></span>
+            <h2>开发中心</h2>
+            <span class="dot"></span>
+        </div>
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-num">95</span>
+                <span class="stat-unit">个</span>
+                <span class="stat-label">数据总量</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">34</span>
+                <span class="stat-unit">个</span>
+                <span class="stat-label">工具总量</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-num">3</span>
+                <span class="stat-unit">类</span>
+                <span class="stat-label">快速构建</span>
+            </div>
+        </div>
+        
+        <div class="timeline">
+            <div class="timeline-line"></div>
+            <div class="timeline-items">
+                <div class="timeline-item top">
+                    <div class="item-content">
+                        <h3>01 开通用户</h3>
+                        <p>申请注册用户</p>
+                    </div>
+                    <div class="item-dot"></div>
+                </div>
+                <div class="timeline-item bottom">
+                    <div class="item-dot"></div>
+                    <div class="item-content">
+                        <h3>02 数据服务注册申请获取</h3>
+                        <p>进入数据服务，可按需注册发布数据服务，按需申请检索数据服务，经审核后检索数据服务</p>
+                    </div>
+                </div>
+                <div class="timeline-item top">
+                    <div class="item-content">
+                        <h3>03 工具申请获取</h3>
+                        <p>进入工具箱，可按需注册/发布工具，按需申请检索工具，经审核后即可发布或调用</p>
+                    </div>
+                    <div class="item-dot"></div>
+                </div>
+                <div class="timeline-item bottom">
+                    <div class="item-dot"></div>
+                    <div class="item-content">
+                        <h3>04 地图API获取</h3>
+                        <p>提供基于web的二三维地图应用开发接口</p>
+                    </div>
+                </div>
+                <div class="timeline-item top">
+                    <div class="item-content">
+                        <h3>05 快速构建</h3>
+                        <p>提供大屏构建、流程搭建、智能构建功能</p>
+                    </div>
+                    <div class="item-dot"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 底部 -->
+    <footer class="footer">
+        <div class="footer-links">
+            <div class="link-group">
+                <h4>🔗 快速入口</h4>
+                <a href="#">中国政府网</a>
+            </div>
+            <div class="link-group">
+                <h4>国家林业和草原局</h4>
+            </div>
+            <div class="link-group">
+                <h4>中国地质调查局</h4>
+            </div>
+            <div class="link-group">
+                <h4>派出机构 ▾</h4>
+            </div>
+            <div class="link-group">
+                <h4>直属单位 ▾</h4>
+            </div>
+        </div>
+        <div class="footer-selects">
+            <select>
+                <option>国务院部门网站</option>
+            </select>
+            <select>
+                <option>省级政府</option>
+            </select>
+            <select>
+                <option>地方自然资源主管部门</option>
+            </select>
+            <select>
+                <option>学会协会</option>
+            </select>
+            <select>
+                <option>其他链接</option>
+            </select>
+        </div>
+        <div class="footer-info">
+            <p>主办：中华人民共和国自然资源部</p>
+            <p>承办：中华人民共和国自然资源部</p>
+            <p>版权所有：中华人民共和国自然资源部</p>
+            <p>政府网站标识码：bm16000001</p>
+            <p>京ICP备18044900号-1</p>
+        </div>
+    </footer>
+
+    <script src="js/map.js"></script>
+</body>
+</html>
